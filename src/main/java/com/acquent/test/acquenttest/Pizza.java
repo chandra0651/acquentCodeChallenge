@@ -9,7 +9,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 @Service
-public class Pizza {
+public class Pizza  {
 
     Order order;
 
@@ -38,6 +38,7 @@ public class Pizza {
             order.setCurretTime(currentDate(epoch));
         });
         reader.close();
+        lexicographicalOrder(orders);
         outPutFile(outputFileLocation, orders);
     }
 
